@@ -111,6 +111,9 @@
           (catch InterruptedException e
             nil))))))
 
+(defn weighted-msg-stream [queues channel-fn & [msecs]]
+  (doseq [[queue weight] queues]))
+
 (def *conduit-rabbitmq-id* nil)
 
 (defn msg-handler-fn [f msg]
